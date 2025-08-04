@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #e8e8e8;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.p2p.Step2Controller">
+   <stylesheets>
+      <URL value="@main.css" />
+   </stylesheets>
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="126.0" prefHeight="540.0" prefWidth="500.0" style="-fx-background-color: #111111;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="200.0" layoutY="325.0" prefHeight="18.0" prefWidth="500.0" text="Enter your results" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="53.0" layoutY="388.0" prefHeight="26.0" prefWidth="394.0" text="You're almost done — just a few more details to set up " textFill="WHITE" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="53.39999999999998">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="209.0" layoutY="414.0" text="your profile" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../one.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="717.0" layoutY="87.0" text="Step 2">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="619.0" layoutY="128.0" prefHeight="26.0" prefWidth="266.0">
+         <children>
+            <Pane fx:id="bars" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="9.0" prefWidth="200.0">
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane fx:id="bar1" maxHeight="-Infinity" prefHeight="9.0" prefWidth="200.0">
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane fx:id="bars" maxHeight="-Infinity" prefHeight="9.0" prefWidth="200.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Pane>
+         </children>
+      </HBox>
+      <ScrollPane fx:id="scrollable" layoutX="555.0" layoutY="186.0" prefHeight="247.0" prefWidth="404.0" style="-fx-background-radius: transparent; -fx-background-color: #e8e8e8;">
+         <content>
+            <VBox fx:id="module_box" prefHeight="247.0" prefWidth="404.0" style="-fx-background-color: #e8e8e8;">
+               <children>
+                  <VBox fx:id="manualBox" prefHeight="60.0" prefWidth="392.0">
+                     <children>
+                        <Label text="Choose your module">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="37.6" prefWidth="200.0">
+                           <children>
+                              <ComboBox fx:id="combo_2" prefHeight="38.0" prefWidth="273.0">
+                                 <HBox.margin>
+                                    <Insets right="12.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <TextField minHeight="37.6" minWidth="37.6" prefWidth="37.6" />
+                              <Button fx:id="delete_man" mnemonicParsing="false" text="Delete">
+                                 <HBox.margin>
+                                    <Insets left="12.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="12.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button fx:id="next_step3" layoutX="836.0" layoutY="522.0" maxWidth="136.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#goToStep3" prefHeight="42.0" prefWidth="106.0" text="Next">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="clickable" layoutX="555.0" layoutY="535.0" onMouseClicked="#skipThrough" text="Skip for now" />
+      <Button fx:id="step2_btn" layoutX="727.0" layoutY="452.0" mnemonicParsing="false" onAction="#addRow" text="+">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <HBox fx:id="back_box1" alignment="CENTER_LEFT" layoutX="528.0" layoutY="77.0" onMouseClicked="#goToStep1" prefHeight="20.0" prefWidth="54.0" styleClass="hover-box">
+         <children>
+            <ImageView fx:id="back_arrow1" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="back_arrow1">
+               <image>
+                  <Image url="@../../../arrow_back_75dp_FFFFFF_FILL0_wght600_GRAD200_opsz48.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="18.0" prefWidth="42.0" styleClass="back1" text="Back">
+               <HBox.margin>
+                  <Insets left="4.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="top_auth" alignment="CENTER_LEFT" layoutX="10.0" layoutY="-8.0" prefHeight="60.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../../one.png" />
+               </image>
+            </ImageView>
+            <Label text="Registration">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
